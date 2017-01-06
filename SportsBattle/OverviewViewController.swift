@@ -65,8 +65,8 @@ class OverviewViewController : UITableViewController {
                         let wijk = properties["Wijk"] as! String
                         
                         let name = properties["Naam"] as! String
-                        let lat = coordinates[0]
-                        let long = coordinates[1]
+                        let lat = coordinates[1]
+                        let long = coordinates[0]
                         
                         let coo = CLLocationCoordinate2D(latitude: lat, longitude: long)
                         
