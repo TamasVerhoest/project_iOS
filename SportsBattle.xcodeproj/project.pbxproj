@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02405CC71E22619A003E24C8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC51E22619A003E24C8 /* RealmSwift.framework */; };
+		02405CC81E22619A003E24C8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC61E22619A003E24C8 /* Realm.framework */; };
+		02405CC91E2261CF003E24C8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC51E22619A003E24C8 /* RealmSwift.framework */; };
+		02405CCA1E2261CF003E24C8 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC51E22619A003E24C8 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		02405CCB1E2261CF003E24C8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC61E22619A003E24C8 /* Realm.framework */; };
+		02405CCC1E2261CF003E24C8 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC61E22619A003E24C8 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0240BDB81E1E3829005CF527 /* SportLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0240BDB71E1E3829005CF527 /* SportLocation.swift */; };
 		0240BDC11E1E40FB005CF527 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0240BDC01E1E40FB005CF527 /* Properties.plist */; };
 		0240BDC31E1E4318005CF527 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0240BDC21E1E4318005CF527 /* LocationViewController.swift */; };
+		0295CD6A1E227CB90051B6A3 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295CD691E227CB90051B6A3 /* GamesViewController.swift */; };
+		0295CD6E1E2283050051B6A3 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295CD6D1E2283050051B6A3 /* RealmService.swift */; };
+		0295CD711E2289420051B6A3 /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295CD701E2289420051B6A3 /* ChallengeService.swift */; };
 		02E8F8D91DF7FDF0004AC2FA /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8F8D81DF7FDF0004AC2FA /* OverviewViewController.swift */; };
 		02E8F8DB1DF80874004AC2FA /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E8F8DA1DF80874004AC2FA /* CreateViewController.swift */; };
 		02EC2F4F1DF4B56C007C466A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2F4E1DF4B56C007C466A /* AppDelegate.swift */; };
@@ -17,15 +26,33 @@
 		02EC2F561DF4B56C007C466A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02EC2F551DF4B56C007C466A /* Assets.xcassets */; };
 		02EC2F591DF4B56C007C466A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02EC2F571DF4B56C007C466A /* LaunchScreen.storyboard */; };
 		02EC2F621DF4B5B3007C466A /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2F611DF4B5B3007C466A /* Challenge.swift */; };
-		02EC2F641DF4B7DE007C466A /* ChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2F631DF4B7DE007C466A /* ChallengeModel.swift */; };
 		02EC2F661DF4BBBF007C466A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2F651DF4BBBF007C466A /* Game.swift */; };
-		02EC2F681DF4C426007C466A /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EC2F671DF4C426007C466A /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		02405CCD1E2261CF003E24C8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				02405CCC1E2261CF003E24C8 /* Realm.framework in Embed Frameworks */,
+				02405CCA1E2261CF003E24C8 /* RealmSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		02405CC51E22619A003E24C8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		02405CC61E22619A003E24C8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		0240BDB71E1E3829005CF527 /* SportLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportLocation.swift; sourceTree = "<group>"; };
 		0240BDC01E1E40FB005CF527 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
 		0240BDC21E1E4318005CF527 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		0295CD691E227CB90051B6A3 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
+		0295CD6D1E2283050051B6A3 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
+		0295CD701E2289420051B6A3 /* ChallengeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
 		02E8F8D81DF7FDF0004AC2FA /* OverviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
 		02E8F8DA1DF80874004AC2FA /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		02EC2F4B1DF4B56C007C466A /* SportsBattle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsBattle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,9 +62,7 @@
 		02EC2F581DF4B56C007C466A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02EC2F5A1DF4B56C007C466A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02EC2F611DF4B5B3007C466A /* Challenge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
-		02EC2F631DF4B7DE007C466A /* ChallengeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeModel.swift; sourceTree = "<group>"; };
 		02EC2F651DF4BBBF007C466A /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		02EC2F671DF4C426007C466A /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,18 +70,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02405CCB1E2261CF003E24C8 /* Realm.framework in Frameworks */,
+				02405CC81E22619A003E24C8 /* Realm.framework in Frameworks */,
+				02405CC71E22619A003E24C8 /* RealmSwift.framework in Frameworks */,
+				02405CC91E2261CF003E24C8 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0295CD6F1E2289230051B6A3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0295CD6D1E2283050051B6A3 /* RealmService.swift */,
+				0295CD701E2289420051B6A3 /* ChallengeService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		02E8F8D71DF7FDC8004AC2FA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				02E8F8D81DF7FDF0004AC2FA /* OverviewViewController.swift */,
 				02E8F8DA1DF80874004AC2FA /* CreateViewController.swift */,
 				0240BDC21E1E4318005CF527 /* LocationViewController.swift */,
+				0295CD691E227CB90051B6A3 /* GamesViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -64,6 +103,8 @@
 		02EC2F421DF4B56C007C466A = {
 			isa = PBXGroup;
 			children = (
+				02405CC51E22619A003E24C8 /* RealmSwift.framework */,
+				02405CC61E22619A003E24C8 /* Realm.framework */,
 				0240BDC01E1E40FB005CF527 /* Properties.plist */,
 				02EC2F4D1DF4B56C007C466A /* SportsBattle */,
 				02EC2F4C1DF4B56C007C466A /* Products */,
@@ -81,6 +122,7 @@
 		02EC2F4D1DF4B56C007C466A /* SportsBattle */ = {
 			isa = PBXGroup;
 			children = (
+				0295CD6F1E2289230051B6A3 /* Service */,
 				02E8F8D71DF7FDC8004AC2FA /* ViewController */,
 				02EC2F601DF4B58C007C466A /* Model */,
 				02EC2F4E1DF4B56C007C466A /* AppDelegate.swift */,
@@ -96,9 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				02EC2F611DF4B5B3007C466A /* Challenge.swift */,
-				02EC2F631DF4B7DE007C466A /* ChallengeModel.swift */,
 				02EC2F651DF4BBBF007C466A /* Game.swift */,
-				02EC2F671DF4C426007C466A /* GameModel.swift */,
 				0240BDB71E1E3829005CF527 /* SportLocation.swift */,
 			);
 			name = Model;
@@ -114,6 +154,8 @@
 				02EC2F471DF4B56C007C466A /* Sources */,
 				02EC2F481DF4B56C007C466A /* Frameworks */,
 				02EC2F491DF4B56C007C466A /* Resources */,
+				02405CCD1E2261CF003E24C8 /* Embed Frameworks */,
+				02405CCE1E2261E9003E24C8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -172,16 +214,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02405CCE1E2261E9003E24C8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		02EC2F471DF4B56C007C466A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02EC2F681DF4C426007C466A /* GameModel.swift in Sources */,
-				02EC2F641DF4B7DE007C466A /* ChallengeModel.swift in Sources */,
+				0295CD6A1E227CB90051B6A3 /* GamesViewController.swift in Sources */,
 				02E8F8DB1DF80874004AC2FA /* CreateViewController.swift in Sources */,
 				02EC2F4F1DF4B56C007C466A /* AppDelegate.swift in Sources */,
 				02EC2F621DF4B5B3007C466A /* Challenge.swift in Sources */,
+				0295CD6E1E2283050051B6A3 /* RealmService.swift in Sources */,
+				0295CD711E2289420051B6A3 /* ChallengeService.swift in Sources */,
 				0240BDC31E1E4318005CF527 /* LocationViewController.swift in Sources */,
 				02EC2F661DF4BBBF007C466A /* Game.swift in Sources */,
 				02E8F8D91DF7FDF0004AC2FA /* OverviewViewController.swift in Sources */,
@@ -308,6 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SportsBattle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -321,6 +384,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SportsBattle/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -1,13 +1,17 @@
 import UIKit
 import CoreLocation
-
+import RealmSwift
 
 class OverviewViewController : UITableViewController {
     
+    let service = RealmService()
     var sportLocations: [SportLocation] = []
     
     override func viewDidLoad() {
         getData()
+        
+       service.addChallenge(name: "testTwee", desc: "desc", sport: .Basketball, status: .NotDecided)
+       
     }
     
     @IBAction func showLocations(){
@@ -88,6 +92,7 @@ class OverviewViewController : UITableViewController {
         }).resume()
         
     }
+
 }
 
     

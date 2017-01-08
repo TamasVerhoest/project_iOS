@@ -1,37 +1,28 @@
 import Foundation
+import RealmSwift
 
-class Game {
+class Game: Object {
+    dynamic var playerOne = ""
+    dynamic var playerTwo = ""
+    dynamic var currentChallenge = 0
+    dynamic var numberOfChallenges = 0
+    //dynamic var result = GameResult.Ongoing.rawValue
     
-    var playerOne: String
-    var playerTwo: String
-    var currentChallenge: Int
-    var nrOfWinsPlayerOne: Int
-    var nrOfWinsPlayerTwo: Int
+    let challenges = List<Challenge>()
     
-    var challenges = [Challenge]()
+    /*var gameEnum: GameResult {
+        get {
+            return GameResult(rawValue: result)!
+        }
+        set {
+            result = newValue.rawValue
+        }
+    } */
     
-    init(playerOne: String, playerTwo: String, nrOfGames: Int) {
-        self.playerOne = playerOne
-        self.playerTwo = playerTwo
-        
-        nrOfWinsPlayerOne = 0
-        nrOfWinsPlayerTwo = 0
-        currentChallenge = 0
-        
-    }
-    
-    
-    
-    
-    func checkIfWinner() -> Bool {
-        
-        
-        
-        return true
-    }
-    
-    func completeChallenge(){
-        
-    }
-    
+}
+
+enum GameResult: String {
+    case Ongoing
+    case WonByPlayerOne
+    case WonByPlayerTwo
 }
