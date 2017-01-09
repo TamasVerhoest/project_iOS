@@ -10,7 +10,7 @@ class OverviewViewController : UITableViewController {
     override func viewDidLoad() {
         getData()
         
-       service.addChallenge(name: "testTwee", desc: "desc", sport: .Basketball, status: .NotDecided)
+     
        
     }
     

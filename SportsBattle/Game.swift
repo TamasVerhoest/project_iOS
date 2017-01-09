@@ -6,18 +6,19 @@ class Game: Object {
     dynamic var playerTwo = ""
     dynamic var currentChallenge = 0
     dynamic var numberOfChallenges = 0
-    //dynamic var result = GameResult.Ongoing.rawValue
+    dynamic var result = GameResult.Ongoing.rawValue
     
     let challenges = List<Challenge>()
     
-    /*var gameEnum: GameResult {
+    var gameEnum: GameResult {
         get {
             return GameResult(rawValue: result)!
         }
         set {
             result = newValue.rawValue
         }
-    } */
+    }
+    
     
 }
 
