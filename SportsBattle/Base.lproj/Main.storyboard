@@ -34,6 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create Game"/>
                                 <connections>
+                                    <action selector="createGame" destination="aaK-3l-2GT" eventType="touchUpInside" id="dw8-rH-OlP"/>
                                     <segue destination="kel-iB-wym" kind="show" identifier="createdGame" id="Zak-pb-Oas"/>
                                 </connections>
                             </button>
@@ -114,6 +115,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Create a game" id="NrD-ZJ-C0G"/>
                     <connections>
+                        <outlet property="playerOne" destination="pXW-TZ-nBM" id="0kt-PW-QOm"/>
+                        <outlet property="playerTwo" destination="iXT-uI-bXn" id="77c-0d-qvz"/>
                         <outlet property="stepper" destination="vpl-h4-XRp" id="f9v-pL-NQQ"/>
                         <outlet property="stepperValue" destination="xht-Hh-vkN" id="6AZ-XK-O30"/>
                     </connections>
@@ -232,24 +235,24 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" textLabel="7W8-Uz-pGe" detailTextLabel="FOJ-zk-DFe" style="IBUITableViewCellStyleValue2" id="vi1-6M-MiB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" textLabel="7W8-Uz-pGe" detailTextLabel="PA5-zT-OTG" style="IBUITableViewCellStyleValue1" id="vi1-6M-MiB">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vi1-6M-MiB" id="ej7-aX-LPa">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7W8-Uz-pGe">
-                                            <rect key="frame" x="15" y="14" width="91" height="16"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7W8-Uz-pGe">
+                                            <rect key="frame" x="15" y="11" width="34" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FOJ-zk-DFe">
-                                            <rect key="frame" x="112" y="14" width="35" height="16"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PA5-zT-OTG">
+                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>

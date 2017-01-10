@@ -4,7 +4,7 @@ import RealmSwift
 class Challenge: Object {
     dynamic var name = ""
     dynamic var challengeDescription = ""
-    dynamic var sportType = SportType.Default.rawValue
+    dynamic var sportType = SportType.NoSpecificType.rawValue
     dynamic var result = Result.NotDecided.rawValue
     
     
@@ -29,7 +29,7 @@ class Challenge: Object {
 
 
 enum SportType: String {
-    case Default
+    case NoSpecificType
     case Basketball
     case Soccer
     case Swimming

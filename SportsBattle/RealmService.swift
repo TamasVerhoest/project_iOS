@@ -23,11 +23,11 @@ class RealmService {
         
     }
     
-    func addGame(playerOne: String, playerTwo: String){
+    func addGame(playerOne: String, playerTwo: String, numberOfChallenges: Int){
         
         
         
-        let game = Game(value: ["playerOne": playerOne, "playerTwo" : playerTwo, "result" : "WonByPlayerOne"])
+        let game = Game(value: ["playerOne": playerOne, "playerTwo" : playerTwo, "result" : "Ongoing"])
         
         
         let challenge = Challenge(value: ["name" : "c1","challengeDescription" : "d1", "sportTypeEnum" : "Basketball"])
@@ -35,9 +35,6 @@ class RealmService {
         
         game.challenges.append(challenge)
         game.challenges.append(challenge2)
-        
- 
-        
         
         //getting random challenges and linking them to the game
         
@@ -86,6 +83,14 @@ class RealmService {
         let allGames = getAllGames()
         
         return allGames.filter("result == 'Ongoing'")
+    }
+    
+    func getScore(game: Game) -> (Int,Int) {
+        let scoreOne = game.challenges.filter("result == 'playerOne'").count
+        
+        let scoreTwo = game.challenges.filter("result == 'playerTwo'").count
+        
+        return (scoreOne,scoreTwo)
     }
     
     

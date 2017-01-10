@@ -43,7 +43,10 @@ class GamesViewController: UITableViewController {
         
         if indexPath.section == 0 {
             let game = service.getOngoingGame(index: indexPath.item)
+            let score = service.getScore(game: game)
+            print(score)
             cell.textLabel?.text = "\(game.playerOne) versus \(game.playerTwo)"
+            cell.detailTextLabel?.text = "Score: \(score.0) - \(score.1)"
         } else {
             let game = service.getPlayedGame(index: indexPath.item)
             cell.textLabel?.text = "\(game.playerOne) versus \(game.playerTwo)"
