@@ -8,10 +8,9 @@ class OverviewViewController : UITableViewController {
     var sportLocations: [SportLocation] = []
     
     override func viewDidLoad() {
+       
         getData()
         
-     
-       
     }
     
     @IBAction func showLocations(){

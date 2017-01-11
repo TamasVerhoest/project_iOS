@@ -147,9 +147,7 @@
                                                     <rect key="frame" x="0.0" y="7" width="375" height="30"/>
                                                     <state key="normal" title="Create a new game"/>
                                                     <connections>
-                                                        <segue destination="aaK-3l-2GT" kind="popoverPresentation" identifier="createGame" popoverAnchorView="BRp-NT-QwA" id="sb2-QK-iLd">
-                                                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                                        </segue>
+                                                        <segue destination="aaK-3l-2GT" kind="show" identifier="createGame" id="sb2-QK-iLd"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -226,7 +224,7 @@
             </objects>
             <point key="canvasLocation" x="404" y="-1038.5307346326838"/>
         </scene>
-        <!--Games View Controller-->
+        <!--Overview Games-->
         <scene sceneID="HhA-0o-ajD">
             <objects>
                 <tableViewController id="OYd-SA-i9N" customClass="GamesViewController" customModule="SportsBattle" customModuleProvider="target" sceneMemberID="viewController">
@@ -235,11 +233,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="gameCell" textLabel="7W8-Uz-pGe" detailTextLabel="PA5-zT-OTG" style="IBUITableViewCellStyleValue1" id="vi1-6M-MiB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="gameCell" textLabel="7W8-Uz-pGe" detailTextLabel="PA5-zT-OTG" style="IBUITableViewCellStyleValue1" id="vi1-6M-MiB">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vi1-6M-MiB" id="ej7-aX-LPa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7W8-Uz-pGe">
@@ -250,7 +248,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PA5-zT-OTG">
-                                            <rect key="frame" x="316" y="11" width="44" height="21"/>
+                                            <rect key="frame" x="296" y="11" width="44" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -265,12 +263,83 @@
                             <outlet property="delegate" destination="OYd-SA-i9N" id="WRL-d5-o2o"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Overview Games" id="cI9-JY-oxK"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <segue destination="SZc-eT-Ee8" kind="show" identifier="showDetailsGame" id="Rhd-cp-SR2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pQo-hD-Clm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="404" y="-212"/>
         </scene>
-        <!--Location View Controller-->
+        <!--Detail Challenge-->
+        <scene sceneID="mer-FX-XOA">
+            <objects>
+                <viewController id="SZc-eT-Ee8" customClass="DetailViewController" customModule="SportsBattle" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="quF-sU-dpc"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uja-LQ-fRp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3yf-aj-GXS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XJf-ru-37b">
+                                <rect key="frame" x="24" y="106" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnX-e7-a4b">
+                                <rect key="frame" x="24" y="180" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Us-83-xVD">
+                                <rect key="frame" x="24" y="298" width="327" height="30"/>
+                                <state key="normal" title="Player One Won"/>
+                                <connections>
+                                    <action selector="playerOneWon" destination="SZc-eT-Ee8" eventType="touchUpInside" id="ZbQ-iZ-uYM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqS-uT-LNU">
+                                <rect key="frame" x="24" y="362" width="327" height="30"/>
+                                <state key="normal" title="Player Two Won"/>
+                                <connections>
+                                    <action selector="playerTwoWon" destination="SZc-eT-Ee8" eventType="touchUpInside" id="S0p-r5-jGu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="zqS-uT-LNU" secondAttribute="trailing" constant="8" id="0Mt-Zf-lxo"/>
+                            <constraint firstItem="zqS-uT-LNU" firstAttribute="top" secondItem="1Us-83-xVD" secondAttribute="bottom" constant="34" id="3SM-XV-CEx"/>
+                            <constraint firstItem="1Us-83-xVD" firstAttribute="leading" secondItem="3yf-aj-GXS" secondAttribute="leadingMargin" constant="8" id="9JS-h6-qL5"/>
+                            <constraint firstItem="gnX-e7-a4b" firstAttribute="top" secondItem="XJf-ru-37b" secondAttribute="bottom" constant="53" id="F0W-BA-ue5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XJf-ru-37b" secondAttribute="trailing" constant="8" id="IZR-rd-VRs"/>
+                            <constraint firstItem="zqS-uT-LNU" firstAttribute="leading" secondItem="3yf-aj-GXS" secondAttribute="leadingMargin" constant="8" id="Meo-Pu-mbh"/>
+                            <constraint firstItem="1Us-83-xVD" firstAttribute="top" secondItem="gnX-e7-a4b" secondAttribute="bottom" constant="97" id="Qnc-Yz-1s6"/>
+                            <constraint firstItem="XJf-ru-37b" firstAttribute="leading" secondItem="3yf-aj-GXS" secondAttribute="leadingMargin" constant="8" id="acL-rY-BRE"/>
+                            <constraint firstItem="XJf-ru-37b" firstAttribute="top" secondItem="quF-sU-dpc" secondAttribute="bottom" constant="42" id="gKH-j2-aMv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gnX-e7-a4b" secondAttribute="trailing" constant="8" id="kjC-Sq-uZR"/>
+                            <constraint firstItem="gnX-e7-a4b" firstAttribute="leading" secondItem="3yf-aj-GXS" secondAttribute="leadingMargin" constant="8" id="x5f-eS-9zh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Us-83-xVD" secondAttribute="trailing" constant="8" id="z1z-Bo-Kth"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail Challenge" id="Zmz-Dm-IXF"/>
+                    <connections>
+                        <outlet property="desc" destination="gnX-e7-a4b" id="KhP-2Q-tPc"/>
+                        <outlet property="name" destination="XJf-ru-37b" id="hbu-LZ-fDz"/>
+                        <segue destination="OYd-SA-i9N" kind="show" identifier="backToGames" id="beg-U2-fnF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bao-i5-uNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="555"/>
+        </scene>
+        <!--Locations-->
         <scene sceneID="0gn-LP-9nL">
             <objects>
                 <viewController id="ZQ1-lN-h7k" customClass="LocationViewController" customModule="SportsBattle" customModuleProvider="target" sceneMemberID="viewController">
@@ -324,6 +393,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Locations" id="IS9-qS-1Lx"/>
                     <connections>
                         <outlet property="mapView" destination="d50-CJ-cff" id="fw6-me-Rhd"/>
                         <outlet property="tableView" destination="bPB-Wi-ShU" id="ORP-Zn-1gj"/>
@@ -361,5 +431,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Zak-pb-Oas"/>
+        <segue reference="beg-U2-fnF"/>
     </inferredMetricsTieBreakers>
 </document>

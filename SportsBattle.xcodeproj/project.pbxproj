@@ -16,6 +16,7 @@
 		0240BDB81E1E3829005CF527 /* SportLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0240BDB71E1E3829005CF527 /* SportLocation.swift */; };
 		0240BDC11E1E40FB005CF527 /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0240BDC01E1E40FB005CF527 /* Properties.plist */; };
 		0240BDC31E1E4318005CF527 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0240BDC21E1E4318005CF527 /* LocationViewController.swift */; };
+		026AAC3E1E25865500F84394 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026AAC3D1E25865500F84394 /* DetailViewController.swift */; };
 		0295CD6A1E227CB90051B6A3 /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295CD691E227CB90051B6A3 /* GamesViewController.swift */; };
 		0295CD6E1E2283050051B6A3 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295CD6D1E2283050051B6A3 /* RealmService.swift */; };
 		0295CD711E2289420051B6A3 /* ChallengeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0295CD701E2289420051B6A3 /* ChallengeService.swift */; };
@@ -50,6 +51,7 @@
 		0240BDB71E1E3829005CF527 /* SportLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportLocation.swift; sourceTree = "<group>"; };
 		0240BDC01E1E40FB005CF527 /* Properties.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Properties.plist; sourceTree = "<group>"; };
 		0240BDC21E1E4318005CF527 /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		026AAC3D1E25865500F84394 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0295CD691E227CB90051B6A3 /* GamesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		0295CD6D1E2283050051B6A3 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		0295CD701E2289420051B6A3 /* ChallengeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeService.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				02E8F8DA1DF80874004AC2FA /* CreateViewController.swift */,
 				0240BDC21E1E4318005CF527 /* LocationViewController.swift */,
 				0295CD691E227CB90051B6A3 /* GamesViewController.swift */,
+				026AAC3D1E25865500F84394 /* DetailViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				026AAC3E1E25865500F84394 /* DetailViewController.swift in Sources */,
 				0295CD6A1E227CB90051B6A3 /* GamesViewController.swift in Sources */,
 				02E8F8DB1DF80874004AC2FA /* CreateViewController.swift in Sources */,
 				02EC2F4F1DF4B56C007C466A /* AppDelegate.swift in Sources */,

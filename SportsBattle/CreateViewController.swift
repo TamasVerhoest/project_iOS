@@ -22,7 +22,7 @@ class CreateViewController : UIViewController {
     
     
     override func viewDidLoad() {
-        service.deleteRealm()
+        
         
         //Code to get rid of keyboard after input
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")

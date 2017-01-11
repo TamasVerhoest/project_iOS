@@ -5,12 +5,21 @@ class GamesViewController: UITableViewController {
     
     
     let service = RealmService()
- 
+    var selectedGame = Game()
     
     override func viewDidLoad() {
         
-      service.getAllGames()
-      
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDetailsGame" {
+            
+            let destination = (segue.destination as! DetailViewController)
+            
+            destination.game = self.selectedGame
+        }
+        
     }
     
     
@@ -50,12 +59,21 @@ class GamesViewController: UITableViewController {
         } else {
             let game = service.getPlayedGame(index: indexPath.item)
             cell.textLabel?.text = "\(game.playerOne) versus \(game.playerTwo)"
+            cell.detailTextLabel?.text = game.gameEnum.rawValue
         }
         
         return cell
     }
     
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.section == 0 {
+            selectedGame = service.getOngoingGame(index: indexPath.item)
+            service.checkIfGameEnded(game: selectedGame)
+            performSegue(withIdentifier: "showDetailsGame", sender: self)
+        }
+        
+    }
     
     
     
