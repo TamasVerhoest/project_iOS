@@ -2,7 +2,7 @@ import UIKit
 import CoreLocation
 import RealmSwift
 
-class OverviewViewController : UITableViewController {
+class OverviewViewController : UIViewController {
     
     let service = RealmService()
     var sportLocations: [SportLocation] = []
@@ -10,6 +10,7 @@ class OverviewViewController : UITableViewController {
     override func viewDidLoad() {
        
         getData()
+        service.testService()
         
     }
     
@@ -58,16 +59,22 @@ class OverviewViewController : UITableViewController {
                     
                     var location: SportLocation
                     
-                    for index in 0...features.count - 1 {
+                    for index in 0...features.count - 9 {
                         let feature = features[index] as! [String:AnyObject]
                         
                         let properties = feature["properties"] as! [String:AnyObject]
+                        
+                        
                         let geometry = feature["geometry"] as! [String:AnyObject]
                         
                         let coordinates = geometry["coordinates"] as! [Double]
+                        
                         let wijk = properties["Wijk"] as! String
                         
                         let name = properties["Naam"] as! String
+                        
+                
+                        
                         let lat = coordinates[1]
                         let long = coordinates[0]
                         

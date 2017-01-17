@@ -5,23 +5,8 @@ class RealmService {
     
     let realm = try! Realm()
     let randomChallenges = List<Challenge>()
+    let challengeService = ChallengeService()
     
-    
-    func addChallenge(name: String, desc: String, sport: SportType, status: Result){
-        
-        
-       // let challenge = Challenge(value: ["name" : name,"challengeDescription" : desc, "sportTypeEnum" : sport])
-        
-        let challenge = Challenge()
-        challenge.name = name
-        challenge.challengeDescription = desc
-        challenge.sportTypeEnum = sport
-        
-        try! realm.write {
-            self.realm.add(challenge)
-        }
-        
-    }
     
     func addGame(playerOne: String, playerTwo: String, numberOfChallenges: Int){
         
@@ -46,19 +31,13 @@ class RealmService {
         }
     }
     
-    func getAllChallenges() -> Results<Challenge> {
-        
-        let allChallenges = realm.objects(Challenge)
-        
-        return allChallenges
-    }
-    
-    func getChallengesFromGames(){
-        
+    func testService(){
+        print (self.challengeService.allChallenges)
     }
     
     func getAllGames() -> Results<Game> {
         let allGames = realm.objects(Game)
+
         return allGames
     }
     
