@@ -13,7 +13,7 @@ class CreateViewController : UIViewController {
     
     
     @IBAction func stepperAction(_ sender: AnyObject) {
-        stepperValue.text = String(stepper.value)
+        stepperValue.text = String(Int(stepper.value))
     }
     
     @IBAction func createGame(){

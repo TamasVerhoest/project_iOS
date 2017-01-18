@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021C857C1E2FDCE700E6E645 /* CustomGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C857B1E2FDCE700E6E645 /* CustomGameCell.swift */; };
+		021C85801E2FEB1800E6E645 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C857F1E2FEB1800E6E645 /* Reachability.swift */; };
 		02405CC71E22619A003E24C8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC51E22619A003E24C8 /* RealmSwift.framework */; };
 		02405CC81E22619A003E24C8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC61E22619A003E24C8 /* Realm.framework */; };
 		02405CC91E2261CF003E24C8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC51E22619A003E24C8 /* RealmSwift.framework */; };
@@ -46,6 +48,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		021C857B1E2FDCE700E6E645 /* CustomGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGameCell.swift; sourceTree = "<group>"; };
+		021C857F1E2FEB1800E6E645 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		02405CC51E22619A003E24C8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		02405CC61E22619A003E24C8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		0240BDB71E1E3829005CF527 /* SportLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportLocation.swift; sourceTree = "<group>"; };
@@ -82,11 +86,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		021C857A1E2FDC1D00E6E645 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				021C857B1E2FDCE700E6E645 /* CustomGameCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		0295CD6F1E2289230051B6A3 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				0295CD6D1E2283050051B6A3 /* RealmService.swift */,
 				0295CD701E2289420051B6A3 /* ChallengeService.swift */,
+				021C857F1E2FEB1800E6E645 /* Reachability.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -125,6 +138,7 @@
 		02EC2F4D1DF4B56C007C466A /* SportsBattle */ = {
 			isa = PBXGroup;
 			children = (
+				021C857A1E2FDC1D00E6E645 /* View */,
 				0295CD6F1E2289230051B6A3 /* Service */,
 				02E8F8D71DF7FDC8004AC2FA /* ViewController */,
 				02EC2F601DF4B58C007C466A /* Model */,
@@ -246,9 +260,11 @@
 				0295CD6E1E2283050051B6A3 /* RealmService.swift in Sources */,
 				0295CD711E2289420051B6A3 /* ChallengeService.swift in Sources */,
 				0240BDC31E1E4318005CF527 /* LocationViewController.swift in Sources */,
+				021C857C1E2FDCE700E6E645 /* CustomGameCell.swift in Sources */,
 				02EC2F661DF4BBBF007C466A /* Game.swift in Sources */,
 				02E8F8D91DF7FDF0004AC2FA /* OverviewViewController.swift in Sources */,
 				0240BDB81E1E3829005CF527 /* SportLocation.swift in Sources */,
+				021C85801E2FEB1800E6E645 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,8 @@ class DetailViewController : UIViewController {
     @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
     
     var seconds = 60
     
@@ -58,7 +60,9 @@ class DetailViewController : UIViewController {
     override func viewDidLoad() {
         
         let challenge = service.getToDoChallenge(game: game)
+        let scores = service.getScore(game: game)
         
+        scoreLabel.text = "\(scores.0) - \(scores.1)"
         name.text = challenge.name
         desc.text = challenge.challengeDescription
 

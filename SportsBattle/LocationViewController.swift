@@ -6,13 +6,25 @@ import Foundation
 class LocationViewController: UIViewController {
     
     var sportLocations: [SportLocation] = []
+
+    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var disconnectedImage: UIImageView!
     
+    
+    let reach = Reachability()
    
     override func viewDidLoad() {
         
+        
+        
+        if !reach.connectedToNetwork() {
+                tableView.isHidden = true
+                mapView.isHidden = true
+                disconnectedImage.isHidden = false
+        }
     }
     
 }
@@ -24,6 +36,7 @@ extension LocationViewController: UITableViewDataSource {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return sportLocations.count
+            
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

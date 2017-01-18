@@ -1,34 +1,19 @@
-import UIKit
+import Foundation
 import CoreLocation
-import RealmSwift
 
-class OverviewViewController : UIViewController {
+class LocationService {
     
-    let service = RealmService()
-    let reach = Reachability()
     var sportLocations: [SportLocation] = []
     
-    override func viewDidLoad() {
+    func getLocations() -> [SportLocation] {
         
-        if reach.connectedToNetwork() {
-           getData()
-        } 
-        
-        
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "showLocations" {
-            
-            let destination = (segue.destination as! LocationViewController)
-            destination.sportLocations = sportLocations
-        }
-        
+        loadData()
+        print(sportLocations)
+        return sportLocations
     }
     
     
-    func getData(){
+    func loadData(){
         let urlAddress = "https://datatank.stad.gent/4/cultuursportvrijetijd/buurtsportlocaties.json"
         // Asynchronous Http call to your api url, using NSURLSession:
         guard let url = URL(string: urlAddress) else
@@ -36,6 +21,7 @@ class OverviewViewController : UIViewController {
             print("Url conversion issue.")
             return
         }
+        
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) -> Void in
             // Check if data was received successfully
             if error == nil && data != nil {
@@ -63,7 +49,7 @@ class OverviewViewController : UIViewController {
                         
                         let name = properties["Naam"] as! String
                         
-                
+                        
                         
                         let lat = coordinates[1]
                         let long = coordinates[0]
@@ -78,7 +64,6 @@ class OverviewViewController : UIViewController {
                     
                 } catch {
                     print(error)
-                   
                     
                 }
             }
@@ -91,5 +76,3 @@ class OverviewViewController : UIViewController {
     }
 
 }
-
-    
