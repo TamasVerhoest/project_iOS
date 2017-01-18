@@ -11,30 +11,21 @@ class RealmService {
     func addGame(playerOne: String, playerTwo: String, numberOfChallenges: Int){
         
         
+        let challenges = challengeService.getRandomChallenges(amount: numberOfChallenges)
         
         let game = Game(value: ["playerOne": playerOne, "playerTwo" : playerTwo, "gameEnum" : "Ongoing"])
         
         
-        let challenge = Challenge(value: ["name" : "c1","challengeDescription" : "d1", "sportTypeEnum" : "Basketball", "resultEnum" : "playerOne"])
-        let challenge2 = Challenge(value: ["name" : "c2","challengeDescription" : "d2", "sportTypeEnum" : "Soccer", "resultEnum" : "playerTwo"])
-        let challenge3 = Challenge(value: ["name" : "c3","challengeDescription" : "d3", "sportTypeEnum" : "Basketball", "resultEnum" : "playerOne"])
-        
-        game.challenges.append(challenge)
-        game.challenges.append(challenge2)
-        game.challenges.append(challenge3)
-        
-        //getting random challenges and linking them to the game
+        for challenge in challenges {
+            game.challenges.append(challenge)
+        }
         
         
         try! realm.write {
             self.realm.add(game)
         }
     }
-    
-    func testService(){
-        print (self.challengeService.allChallenges)
-    }
-    
+
     func getAllGames() -> Results<Game> {
         let allGames = realm.objects(Game)
 
@@ -78,6 +69,12 @@ class RealmService {
         let challenge = game.challenges.filter("result == 'NotDecided'").first!
         
         return challenge
+    }
+    
+    func getChallenge(game: Game) -> (Int,Int) {
+        
+        return getScore(game: game)
+        
     }
     
     func playerOneWins(game: Game) {

@@ -10,20 +10,7 @@ class OverviewViewController : UIViewController {
     override func viewDidLoad() {
        
         getData()
-        service.testService()
         
-    }
-    
-    @IBAction func showLocations(){
-        performSegue(withIdentifier: "showLocations", sender: self)
-    }
-    
-    @IBAction func createGame(){
-        performSegue(withIdentifier: "createGame", sender: self)
-    }
-    
-    @IBAction func showGames(){
-        performSegue(withIdentifier: "showGames", sender: self)
         
     }
     
@@ -88,7 +75,7 @@ class OverviewViewController : UIViewController {
                     
                 } catch {
                     print(error)
-                    // Something went wrong
+                    
                 }
             }
             else if error != nil

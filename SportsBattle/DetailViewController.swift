@@ -6,7 +6,7 @@ import UIKit
 class DetailViewController : UIViewController {
     
     var game = Game()
-    let service = RealmService()
+    var service = RealmService()
     var timer = Timer()
     
     @IBOutlet weak var name : UILabel!
@@ -56,7 +56,9 @@ class DetailViewController : UIViewController {
     }
     
     override func viewDidLoad() {
+        
         let challenge = service.getToDoChallenge(game: game)
+        
         name.text = challenge.name
         desc.text = challenge.challengeDescription
 
