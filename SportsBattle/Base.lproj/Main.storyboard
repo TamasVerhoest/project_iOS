@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,36 +23,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-q0-R0C">
-                                <rect key="frame" x="24" y="436" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="2kA-eQ-9Ex"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="DoD-b8-Zgi"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="DsQ-DJ-UDt"/>
-                                    <constraint firstAttribute="height" constant="128" id="Hdo-OT-HJE"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="uN3-jN-EY5"/>
-                                    <constraint firstAttribute="width" constant="128" id="x4b-hG-Qda"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="interface"/>
-                                <connections>
-                                    <segue destination="OYd-SA-i9N" kind="show" identifier="showGames" id="tdL-iA-Byv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR2-GS-nGH">
-                                <rect key="frame" x="223" y="436" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="Phu-2k-9Hi"/>
-                                    <constraint firstAttribute="width" constant="128" id="Ujq-kP-6ij"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="eSj-Yo-QCa"/>
-                                    <constraint firstAttribute="height" constant="128" id="gzC-hD-NY4"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="nds-ZU-D2V"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="vtU-KP-1mh"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="placeholder"/>
-                                <connections>
-                                    <segue destination="ZQ1-lN-h7k" kind="show" identifier="showLocations" id="bav-iB-G8h"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="J2u-Sd-ufe">
+                                <rect key="frame" x="47" y="436" width="281" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hN-q0-R0C">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="2kA-eQ-9Ex"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="DoD-b8-Zgi"/>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="DsQ-DJ-UDt"/>
+                                            <constraint firstAttribute="height" constant="128" id="Hdo-OT-HJE"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="uN3-jN-EY5"/>
+                                            <constraint firstAttribute="width" constant="128" id="x4b-hG-Qda"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="interface"/>
+                                        <connections>
+                                            <segue destination="OYd-SA-i9N" kind="show" identifier="showGames" id="tdL-iA-Byv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cR2-GS-nGH">
+                                        <rect key="frame" x="153" y="0.0" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="Phu-2k-9Hi"/>
+                                            <constraint firstAttribute="width" constant="128" id="Ujq-kP-6ij"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="eSj-Yo-QCa"/>
+                                            <constraint firstAttribute="height" constant="128" id="gzC-hD-NY4"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="nds-ZU-D2V"/>
+                                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="128" id="vtU-KP-1mh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="placeholder"/>
+                                        <connections>
+                                            <segue destination="ZQ1-lN-h7k" kind="show" identifier="showLocations" id="bav-iB-G8h"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVZ-8n-Vne">
                                 <rect key="frame" x="123" y="283" width="128" height="128"/>
                                 <constraints>
@@ -72,15 +78,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="cR2-GS-nGH" secondAttribute="trailing" constant="8" id="3V9-jl-16L"/>
+                            <constraint firstItem="J2u-Sd-ufe" firstAttribute="centerX" secondItem="QmV-w9-nuG" secondAttribute="centerX" id="0P8-Fk-Vqb"/>
                             <constraint firstItem="IVZ-8n-Vne" firstAttribute="top" secondItem="OwU-DD-3YO" secondAttribute="bottom" constant="50" id="C2X-hf-Prl"/>
+                            <constraint firstItem="J2u-Sd-ufe" firstAttribute="top" secondItem="IVZ-8n-Vne" secondAttribute="bottom" constant="25" id="F7L-fw-avR"/>
                             <constraint firstItem="OwU-DD-3YO" firstAttribute="leading" secondItem="QmV-w9-nuG" secondAttribute="leadingMargin" constant="8" id="HES-TR-lU2"/>
-                            <constraint firstItem="cR2-GS-nGH" firstAttribute="top" secondItem="IVZ-8n-Vne" secondAttribute="bottom" constant="25" id="IVC-tZ-e8f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OwU-DD-3YO" secondAttribute="trailing" constant="8" id="XnS-qC-k5G"/>
-                            <constraint firstItem="8hN-q0-R0C" firstAttribute="leading" secondItem="QmV-w9-nuG" secondAttribute="leadingMargin" constant="8" id="Y2v-eN-k8Y"/>
                             <constraint firstItem="OwU-DD-3YO" firstAttribute="top" secondItem="phE-E0-NVG" secondAttribute="bottom" constant="8" id="bZm-zh-lH9"/>
                             <constraint firstItem="IVZ-8n-Vne" firstAttribute="centerX" secondItem="QmV-w9-nuG" secondAttribute="centerX" id="p4C-wJ-SqP"/>
-                            <constraint firstItem="8hN-q0-R0C" firstAttribute="top" secondItem="IVZ-8n-Vne" secondAttribute="bottom" constant="25" id="xh6-Pu-qNy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IvS-ZB-rXh"/>
@@ -89,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="1471.2" y="-1061.0194902548726"/>
         </scene>
-        <!--Create View Controller-->
+        <!--Nieuwe battle-->
         <scene sceneID="SvV-A5-DXx">
             <objects>
                 <viewController id="aaK-3l-2GT" customClass="CreateViewController" customModule="SportsBattle" customModuleProvider="target" sceneMemberID="viewController">
@@ -191,6 +195,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="ipo-MR-mRV" secondAttribute="trailing" constant="8" id="zXa-by-KqG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Nieuwe battle" id="3JR-8Y-w5i"/>
                     <connections>
                         <outlet property="playerOne" destination="Nvb-I7-43z" id="w69-Ww-Jqf"/>
                         <outlet property="playerTwo" destination="1YX-dl-dOE" id="aJ3-p0-T1P"/>
@@ -202,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="404" y="-1764.4677661169417"/>
         </scene>
-        <!--Games View Controller-->
+        <!--Overzicht battle's-->
         <scene sceneID="HhA-0o-ajD">
             <objects>
                 <tableViewController id="OYd-SA-i9N" customClass="GamesViewController" customModule="SportsBattle" customModuleProvider="target" sceneMemberID="viewController">
@@ -218,21 +223,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Batman v Superman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZU-sp-YBm">
-                                            <rect key="frame" x="25" y="11" width="155" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman v Superman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZU-sp-YBm">
+                                            <rect key="frame" x="11" y="11" width="155" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3-3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHa-yy-Cgd">
-                                            <rect key="frame" x="290" y="11" width="29" height="21"/>
+                                            <rect key="frame" x="297" y="11" width="29" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sword" translatesAutoresizingMaskIntoConstraints="NO" id="LgB-ec-q9g">
-                                            <rect key="frame" x="229" y="3" width="36" height="36"/>
+                                            <rect key="frame" x="246" y="3" width="36" height="36"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="36" id="Y29-Kn-Wca"/>
                                                 <constraint firstAttribute="width" constant="36" id="gPJ-qz-RYZ"/>
@@ -240,10 +244,12 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="MHa-yy-Cgd" secondAttribute="trailing" constant="15" id="b4G-6I-0Wh"/>
-                                        <constraint firstItem="MHa-yy-Cgd" firstAttribute="top" secondItem="ej7-aX-LPa" secondAttribute="topMargin" constant="3" id="gxx-01-Wjw"/>
-                                        <constraint firstItem="MHa-yy-Cgd" firstAttribute="leading" secondItem="LgB-ec-q9g" secondAttribute="trailing" constant="25" id="nTD-YJ-t5U"/>
-                                        <constraint firstItem="LgB-ec-q9g" firstAttribute="top" secondItem="ej7-aX-LPa" secondAttribute="top" constant="3" id="yTV-Tf-yLH"/>
+                                        <constraint firstItem="LgB-ec-q9g" firstAttribute="top" secondItem="ej7-aX-LPa" secondAttribute="top" constant="3" id="Smc-7K-Oet"/>
+                                        <constraint firstItem="LZU-sp-YBm" firstAttribute="leading" secondItem="ej7-aX-LPa" secondAttribute="leadingMargin" constant="3" id="WPA-Wn-cMB"/>
+                                        <constraint firstItem="MHa-yy-Cgd" firstAttribute="top" secondItem="ej7-aX-LPa" secondAttribute="topMargin" constant="3" id="iDx-Mi-MVi"/>
+                                        <constraint firstItem="LZU-sp-YBm" firstAttribute="top" secondItem="ej7-aX-LPa" secondAttribute="topMargin" constant="3" id="tXN-J6-GxD"/>
+                                        <constraint firstItem="MHa-yy-Cgd" firstAttribute="leading" secondItem="LgB-ec-q9g" secondAttribute="trailing" constant="15" id="vkF-A0-Bs3"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="MHa-yy-Cgd" secondAttribute="trailing" constant="8" id="yeZ-g6-Vbq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -258,6 +264,13 @@
                             <outlet property="delegate" destination="OYd-SA-i9N" id="WRL-d5-o2o"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Overzicht battle's" id="DBR-ri-NOe">
+                        <barButtonItem key="rightBarButtonItem" image="home" id="yZh-e5-kqY">
+                            <connections>
+                                <segue destination="8u0-Wh-YDC" kind="show" id="Q2g-DH-9iw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <segue destination="SZc-eT-Ee8" kind="show" identifier="showDetails" id="qQv-mX-h9o"/>
@@ -410,7 +423,7 @@
             </objects>
             <point key="canvasLocation" x="404" y="554.57271364317842"/>
         </scene>
-        <!--Locaties-->
+        <!--Locations-->
         <scene sceneID="0gn-LP-9nL">
             <objects>
                 <viewController id="ZQ1-lN-h7k" customClass="LocationViewController" customModule="SportsBattle" customModuleProvider="target" sceneMemberID="viewController">
@@ -484,7 +497,16 @@
                             <constraint firstAttribute="trailing" secondItem="bPB-Wi-ShU" secondAttribute="trailing" constant="8" id="yY1-1D-bOR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Locaties" id="IS9-qS-1Lx"/>
+                    <navigationItem key="navigationItem" title="Locations" id="IS9-qS-1Lx">
+                        <rightBarButtonItems>
+                            <barButtonItem image="navigation" id="ogz-jK-Hr2">
+                                <connections>
+                                    <action selector="navigate" destination="ZQ1-lN-h7k" id="aT4-X6-q9U"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="distance" id="4zG-EG-06N"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
                     <connections>
                         <outlet property="disconnectedImage" destination="g0Q-Je-QCb" id="b80-As-LuL"/>
                         <outlet property="mapView" destination="d50-CJ-cff" id="fw6-me-Rhd"/>
@@ -496,7 +518,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7545DA10-ECBE-4E6A-8E17-4522FF1EA876" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-9c-fS2">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7C05073A-AC0A-4434-AF7B-1E913A360209" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-9c-fS2">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -526,7 +548,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="7545DA10-ECBE-4E6A-8E17-4522FF1EA876" width="64" height="64">
+        <image name="7C05073A-AC0A-4434-AF7B-1E913A360209" width="64" height="64">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -852,8 +874,11 @@ Si1KMEpCSkVKSgAAAAAAAAIBAAAAAAAAAEEAAAAAAAAAAAAAAAAAAEpMA
         </image>
         <image name="diamond" width="64" height="64"/>
         <image name="disconnected" width="256" height="256"/>
+        <image name="distance" width="32" height="32"/>
+        <image name="home" width="32" height="32"/>
         <image name="interface" width="128" height="128"/>
         <image name="logo2" width="441" height="161"/>
+        <image name="navigation" width="24" height="24"/>
         <image name="placeholder" width="128" height="128"/>
         <image name="play-button" width="32" height="32"/>
         <image name="plus" width="128" height="128"/>
@@ -863,6 +888,7 @@ Si1KMEpCSkVKSgAAAAAAAAIBAAAAAAAAAEEAAAAAAAAAAAAAAAAAAEpMA
         <image name="sword" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4H8-77-wXI"/>
         <segue reference="zFd-42-aSp"/>
     </inferredMetricsTieBreakers>
 </document>
