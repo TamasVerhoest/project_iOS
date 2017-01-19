@@ -22,7 +22,7 @@ class OverviewViewController : UIViewController {
         if segue.identifier == "showLocations" {
             
             let destination = (segue.destination as! LocationViewController)
-            destination.sportLocations = sportLocations
+            destination.sportLocations = sportLocations.sorted(by: { $0.name < $1.name})
         }
         
     }

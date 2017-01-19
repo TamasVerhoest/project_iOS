@@ -504,7 +504,11 @@
                                     <action selector="navigate" destination="ZQ1-lN-h7k" id="aT4-X6-q9U"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem image="distance" id="4zG-EG-06N"/>
+                            <barButtonItem image="distance" id="4zG-EG-06N">
+                                <connections>
+                                    <action selector="selectClosest" destination="ZQ1-lN-h7k" id="SIA-YW-I17"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
@@ -518,7 +522,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="7C05073A-AC0A-4434-AF7B-1E913A360209" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-9c-fS2">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="C1EA8732-DA85-4947-8298-7068C2F6F28D" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-9c-fS2">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -548,7 +552,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="7C05073A-AC0A-4434-AF7B-1E913A360209" width="64" height="64">
+        <image name="C1EA8732-DA85-4947-8298-7068C2F6F28D" width="64" height="64">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

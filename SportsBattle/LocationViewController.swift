@@ -3,11 +3,15 @@ import CoreLocation
 import MapKit
 import Foundation
 
-class LocationViewController: UIViewController {
+class LocationViewController: UIViewController,CLLocationManagerDelegate {
     
     var sportLocations: [SportLocation] = []
     var selectedLocation = SportLocation()
     let reach = Reachability()
+    let manager = CLLocationManager()
+    var myLocation = CLLocationCoordinate2D()
+  
+    
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
@@ -21,13 +25,62 @@ class LocationViewController: UIViewController {
        
     }
     
+    @IBAction func selectClosest() {
+        
+        var closestDistance: Double = 99999999999999.9999999999
+        var closestLocation = SportLocation()
+        var indexOfLocation = 0
+        
+        for (index,location) in sportLocations.enumerated() {
+            
+            let distanceLocations = self.calculateDistance(selectedCoordinate: location.location)
+            
+            if distanceLocations < closestDistance {
+                closestLocation = location
+                closestDistance = distanceLocations
+                indexOfLocation = index
+            }
+        }
+
+        let indexPath = IndexPath(item: indexOfLocation, section: 0)
+        
+        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: UITableViewScrollPosition.middle)
+        
+        self.selectedLocation = closestLocation
+        
+        // Trigger to add pin
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.showsUserLocation = true
+        mapView.region = MKCoordinateRegion(center: closestLocation.location, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        let pin = MKPointAnnotation()
+        pin.coordinate = closestLocation.location
+        mapView.addAnnotation(pin)
+        
+    }
+    
+   
+    
+    
     override func viewDidLoad() {
         
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+        
+        
+        //check if connected to any network
         if !reach.connectedToNetwork() {
                 tableView.isHidden = true
                 mapView.isHidden = true
                 disconnectedImage.isHidden = false
         }
+    }
+    
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+        self.myLocation = location.coordinate
     }
     
 }
@@ -67,8 +120,6 @@ extension LocationViewController: UITableViewDataSource {
     
     func openMapForPlace(sportlocation: SportLocation) {
         
-    
-        
         let latitude:CLLocationDegrees =  sportlocation.location.latitude
         let longitude:CLLocationDegrees =  sportlocation.location.longitude
         
@@ -85,7 +136,18 @@ extension LocationViewController: UITableViewDataSource {
         mapItem.openInMaps(launchOptions: options)
         
     }
+    
+    func calculateDistance(selectedCoordinate: CLLocationCoordinate2D) -> Double {
+        
+        let current = CLLocation(latitude: self.myLocation.latitude, longitude: self.myLocation.longitude)
+        let selected = CLLocation(latitude: selectedCoordinate.latitude, longitude: selectedCoordinate.longitude)
+        
+        let distanceInMeter = current.distance(from: selected)
+        return distanceInMeter
+    }
 }
+
+
 extension LocationViewController: UITableViewDelegate{
     
 }
