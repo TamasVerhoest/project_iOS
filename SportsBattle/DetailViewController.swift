@@ -8,6 +8,7 @@ class DetailViewController : UIViewController {
     var game = Game()
     var service = RealmService()
     var timer = Timer()
+    var challenge = Challenge()
     
     @IBOutlet weak var name : UILabel!
     @IBOutlet weak var desc: UILabel!
@@ -44,8 +45,19 @@ class DetailViewController : UIViewController {
     @IBAction func stopTimer(){
         timer.invalidate()
         seconds = 60
-        timerLabel.text = "\(seconds) seconds"
+        timerLabel.text = "\(seconds) seconden"
         startButton.isEnabled = true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showInfo" {
+            
+            let destination = (segue.destination as! InfoViewController)
+            
+            destination.challenge = self.challenge
+            
+        }
     }
     
     func counter() {
@@ -61,7 +73,7 @@ class DetailViewController : UIViewController {
     
     override func viewDidLoad() {
         
-        let challenge = service.getToDoChallenge(game: game)
+        self.challenge = service.getToDoChallenge(game: game)
         let scores = service.getScore(game: game)
         
         scoreLabel.text = "\(scores.0) - \(scores.1)"

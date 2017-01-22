@@ -4,8 +4,11 @@ import RealmSwift
 class Challenge: Object {
     dynamic var name = ""
     dynamic var challengeDescription = ""
+    dynamic var requirements = ""
+    dynamic var instructions = ""
     dynamic var result = Result.NotDecided.rawValue
     
+
     
     var resultEnum: Result {
         get {
@@ -23,3 +26,6 @@ enum Result: String {
     case PlayerOne
     case PlayerTwo
 }
+
+
+

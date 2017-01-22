@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		021C857C1E2FDCE700E6E645 /* CustomGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C857B1E2FDCE700E6E645 /* CustomGameCell.swift */; };
 		021C85801E2FEB1800E6E645 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C857F1E2FEB1800E6E645 /* Reachability.swift */; };
+		022F9EEF1E34F7F80090016F /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022F9EEE1E34F7F80090016F /* InfoViewController.swift */; };
 		02405CC71E22619A003E24C8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC51E22619A003E24C8 /* RealmSwift.framework */; };
 		02405CC81E22619A003E24C8 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC61E22619A003E24C8 /* Realm.framework */; };
 		02405CC91E2261CF003E24C8 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02405CC51E22619A003E24C8 /* RealmSwift.framework */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		021C857B1E2FDCE700E6E645 /* CustomGameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomGameCell.swift; sourceTree = "<group>"; };
 		021C857F1E2FEB1800E6E645 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		022F9EEE1E34F7F80090016F /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		02405CC51E22619A003E24C8 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		02405CC61E22619A003E24C8 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		0240BDB71E1E3829005CF527 /* SportLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportLocation.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				0240BDC21E1E4318005CF527 /* LocationViewController.swift */,
 				0295CD691E227CB90051B6A3 /* GamesViewController.swift */,
 				026AAC3D1E25865500F84394 /* DetailViewController.swift */,
+				022F9EEE1E34F7F80090016F /* InfoViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				0240BDC31E1E4318005CF527 /* LocationViewController.swift in Sources */,
 				021C857C1E2FDCE700E6E645 /* CustomGameCell.swift in Sources */,
 				02EC2F661DF4BBBF007C466A /* Game.swift in Sources */,
+				022F9EEF1E34F7F80090016F /* InfoViewController.swift in Sources */,
 				02E8F8D91DF7FDF0004AC2FA /* OverviewViewController.swift in Sources */,
 				0240BDB81E1E3829005CF527 /* SportLocation.swift in Sources */,
 				021C85801E2FEB1800E6E645 /* Reachability.swift in Sources */,

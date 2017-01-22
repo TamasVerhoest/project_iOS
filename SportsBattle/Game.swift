@@ -4,8 +4,6 @@ import RealmSwift
 class Game: Object {
     dynamic var playerOne = ""
     dynamic var playerTwo = ""
-    dynamic var currentChallenge = 0
-    dynamic var numberOfChallenges = 0
     dynamic var result = GameResult.Ongoing.rawValue
     
     let challenges = List<Challenge>()
