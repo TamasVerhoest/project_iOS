@@ -207,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="404" y="-1764.4677661169417"/>
         </scene>
-        <!--Overzicht battle's-->
+        <!--Overzicht-->
         <scene sceneID="HhA-0o-ajD">
             <objects>
                 <tableViewController id="OYd-SA-i9N" customClass="GamesViewController" customModule="SportsBattle" customModuleProvider="target" sceneMemberID="viewController">
@@ -220,7 +220,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vi1-6M-MiB" id="ej7-aX-LPa">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman v Superman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZU-sp-YBm">
@@ -264,7 +264,7 @@
                             <outlet property="delegate" destination="OYd-SA-i9N" id="WRL-d5-o2o"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Overzicht battle's" id="DBR-ri-NOe">
+                    <navigationItem key="navigationItem" title="Overzicht" id="DBR-ri-NOe">
                         <barButtonItem key="rightBarButtonItem" image="home" id="yZh-e5-kqY">
                             <connections>
                                 <segue destination="8u0-Wh-YDC" kind="show" id="Q2g-DH-9iw"/>
@@ -320,7 +320,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="crY-kL-ZLX">
-                                <rect key="frame" x="143" y="399.5" width="89" height="32"/>
+                                <rect key="frame" x="143" y="400" width="89" height="32"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ao-GE-f65">
                                         <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
@@ -346,61 +346,90 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="kNq-j1-pTf">
-                                <rect key="frame" x="24" y="538" width="327" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfG-2O-VpJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="64" id="Lrl-f9-Ued"/>
-                                            <constraint firstAttribute="height" constant="64" id="xj7-V3-8AE"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="diamond"/>
-                                        <connections>
-                                            <action selector="playerOneWon" destination="SZc-eT-Ee8" eventType="touchUpInside" id="jyt-sL-KLT"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 - 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mll-Aq-zco">
-                                        <rect key="frame" x="73" y="0.0" width="181" height="64"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwS-2D-02B">
-                                        <rect key="frame" x="263" y="0.0" width="64" height="64"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="64" id="REQ-Jq-G69"/>
-                                            <constraint firstAttribute="height" constant="64" id="WTO-ZQ-9uQ"/>
-                                        </constraints>
-                                        <state key="normal" title="Button" image="spades"/>
-                                        <connections>
-                                            <action selector="playerTwoWon" destination="SZc-eT-Ee8" eventType="touchUpInside" id="GKp-ZN-mO0"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Winnaar?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2C-FD-aS9">
-                                <rect key="frame" x="141.5" y="461.5" width="92.5" height="26.5"/>
+                                <rect key="frame" x="141.5" y="462" width="92.5" height="26.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rtk-ln-ywX">
+                                <rect key="frame" x="24" y="538.5" width="327" height="113.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tyL-8w-ybQ">
+                                        <rect key="frame" x="0.0" y="13" width="64" height="88"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMM-ox-h65">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="8ct-Oa-Xty"/>
+                                                    <constraint firstAttribute="height" constant="64" id="eqF-Py-fhC"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="diamond"/>
+                                                <connections>
+                                                    <action selector="playerOneWon" destination="SZc-eT-Ee8" eventType="touchUpInside" id="R43-Er-n1J"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Superman" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qu-zk-FL5">
+                                                <rect key="frame" x="0.0" y="72" width="64" height="16"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="1Qu-zk-FL5" firstAttribute="centerX" secondItem="tyL-8w-ybQ" secondAttribute="centerX" id="nJl-UF-bzT"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 - 0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFG-2c-574">
+                                        <rect key="frame" x="64" y="43.5" width="199" height="26.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7oo-PG-zZT">
+                                        <rect key="frame" x="263" y="13" width="64" height="88"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFx-xW-fXi">
+                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="9Cu-f2-vRd"/>
+                                                    <constraint firstAttribute="width" constant="64" id="QGZ-dL-kQQ"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="spades"/>
+                                                <connections>
+                                                    <action selector="playerTwoWon" destination="SZc-eT-Ee8" eventType="touchUpInside" id="sJD-kG-Y8F"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhR-Kn-nlH">
+                                                <rect key="frame" x="0.0" y="72" width="64" height="16"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="WhR-Kn-nlH" firstAttribute="centerX" secondItem="7oo-PG-zZT" secondAttribute="centerX" id="Pb4-9B-Vbs"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Uja-LQ-fRp" firstAttribute="top" secondItem="Rtk-ln-ywX" secondAttribute="bottom" constant="15" id="03x-6T-ZSS"/>
                             <constraint firstItem="XJf-ru-37b" firstAttribute="top" secondItem="quF-sU-dpc" secondAttribute="bottom" constant="16" id="34H-HB-Yyi"/>
                             <constraint firstItem="XJf-ru-37b" firstAttribute="centerX" secondItem="3yf-aj-GXS" secondAttribute="centerX" id="3jb-od-wFy"/>
                             <constraint firstItem="N2C-FD-aS9" firstAttribute="centerX" secondItem="3yf-aj-GXS" secondAttribute="centerX" id="CQA-Jf-Ou9"/>
-                            <constraint firstItem="kNq-j1-pTf" firstAttribute="top" secondItem="N2C-FD-aS9" secondAttribute="bottom" constant="50" id="Cih-bN-eOf"/>
+                            <constraint firstItem="Rtk-ln-ywX" firstAttribute="top" secondItem="N2C-FD-aS9" secondAttribute="bottom" constant="50" id="Clh-Xj-NWj"/>
+                            <constraint firstItem="Rtk-ln-ywX" firstAttribute="leading" secondItem="3yf-aj-GXS" secondAttribute="leadingMargin" constant="8" id="IFB-U7-y8S"/>
                             <constraint firstItem="crY-kL-ZLX" firstAttribute="centerX" secondItem="3yf-aj-GXS" secondAttribute="centerX" id="Ksa-dx-cW0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kNq-j1-pTf" secondAttribute="trailing" constant="8" id="OWc-gH-Vlf"/>
                             <constraint firstItem="3JU-ur-FAN" firstAttribute="top" secondItem="gnX-e7-a4b" secondAttribute="bottom" constant="25" id="ThQ-3A-h8x"/>
                             <constraint firstItem="3JU-ur-FAN" firstAttribute="leading" secondItem="3yf-aj-GXS" secondAttribute="leadingMargin" constant="8" id="V1X-7l-nH3"/>
                             <constraint firstAttribute="trailing" secondItem="gnX-e7-a4b" secondAttribute="trailing" constant="8" id="VTw-IW-aPq"/>
                             <constraint firstAttribute="trailing" secondItem="XJf-ru-37b" secondAttribute="trailing" constant="8" id="bkW-Kk-nlf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rtk-ln-ywX" secondAttribute="trailing" constant="8" id="dcV-EU-1Li"/>
                             <constraint firstItem="gnX-e7-a4b" firstAttribute="leading" secondItem="3yf-aj-GXS" secondAttribute="leading" constant="8" id="hw7-f8-Bqe"/>
                             <constraint firstItem="N2C-FD-aS9" firstAttribute="centerX" secondItem="3yf-aj-GXS" secondAttribute="centerX" id="iL9-su-cOr"/>
-                            <constraint firstItem="kNq-j1-pTf" firstAttribute="leading" secondItem="3yf-aj-GXS" secondAttribute="leadingMargin" constant="8" id="l8K-mC-ZVj"/>
                             <constraint firstItem="YUm-aT-mmg" firstAttribute="baseline" secondItem="3JU-ur-FAN" secondAttribute="baseline" id="lL1-Cz-anX"/>
                             <constraint firstItem="N2C-FD-aS9" firstAttribute="top" secondItem="crY-kL-ZLX" secondAttribute="bottom" constant="30" id="oDt-Vv-MtJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="YUm-aT-mmg" secondAttribute="trailing" constant="8" id="t3f-U4-8bt"/>
@@ -413,7 +442,9 @@
                     <connections>
                         <outlet property="desc" destination="gnX-e7-a4b" id="Wc7-4r-hP4"/>
                         <outlet property="name" destination="XJf-ru-37b" id="DWF-mx-XR7"/>
-                        <outlet property="scoreLabel" destination="Mll-Aq-zco" id="SVK-Ba-qRP"/>
+                        <outlet property="playerOne" destination="1Qu-zk-FL5" id="VEv-Yx-lgN"/>
+                        <outlet property="playerTwo" destination="WhR-Kn-nlH" id="1Ek-1Z-19C"/>
+                        <outlet property="scoreLabel" destination="AFG-2c-574" id="ybU-Ca-YAY"/>
                         <outlet property="startButton" destination="1Ao-GE-f65" id="dRv-mz-aia"/>
                         <outlet property="timerLabel" destination="YUm-aT-mmg" id="5qr-pE-dtn"/>
                         <segue destination="OYd-SA-i9N" kind="show" identifier="backToGames" id="3Lv-Jc-Nfk"/>
@@ -522,7 +553,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="C1EA8732-DA85-4947-8298-7068C2F6F28D" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-9c-fS2">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="340EDBCB-1739-48F8-B12F-30564E42A686" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-9c-fS2">
                             <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -552,7 +583,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="C1EA8732-DA85-4947-8298-7068C2F6F28D" width="64" height="64">
+        <image name="340EDBCB-1739-48F8-B12F-30564E42A686" width="64" height="64">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -892,7 +923,7 @@ Si1KMEpCSkVKSgAAAAAAAAIBAAAAAAAAAEEAAAAAAAAAAAAAAAAAAEpMA
         <image name="sword" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4H8-77-wXI"/>
-        <segue reference="zFd-42-aSp"/>
+        <segue reference="3Lv-Jc-Nfk"/>
+        <segue reference="Q2g-DH-9iw"/>
     </inferredMetricsTieBreakers>
 </document>
